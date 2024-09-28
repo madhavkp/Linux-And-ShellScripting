@@ -1,0 +1,13 @@
+ata_set =[
+   ['James','Tanya',1022,'Sr Engr','Mumbai'],
+   ['Arun k','Sam Jones',1023,'Jr Eng','Delhi'],
+   ['Paul B','Harry P',1024,'Sr Eng','Bangalore'],
+   ['James','Raghav S',1025,'Jr Eng','Hyderabad']),
+   ['Arun k','Jitendra K',1026,'Jr Eng','Hyderabad'],
+   ['Ramesh','Soniya',2037,'Architech','Hyderabad'],
+   ['Ramesh','Jim',2038,'Qa Eng','Mumbai'],
+   ['Paul B','Paul P',2039,'Qa Eng','Bangalore'],
+   ['Paul B','Tim',2040,'Qa Eng','Bangalore'],
+   ['Arun K','Rajesh',1027,'Jr Eng','Delhi'],
+   ]
+
