@@ -1,4 +1,4 @@
-ata_set =[
+data_set =[
    ['James','Tanya',1022,'Sr Engr','Mumbai'],
    ['Arun k','Sam Jones',1023,'Jr Eng','Delhi'],
    ['Paul B','Harry P',1024,'Sr Eng','Bangalore'],
@@ -11,3 +11,43 @@ ata_set =[
    ['Arun K','Rajesh',1027,'Jr Eng','Delhi'],
    ]
 
+
+
+from collections import defaultdict
+
+data_set = [
+    ['James', 'Tanya', 1022, 'Sr Engr', 'Mumbai'],
+    ['Arun k', 'Sam Jones', 1023, 'Jr Eng', 'Delhi'],
+    ['Paul B', 'Harry P', 1024, 'Sr Eng', 'Bangalore'],
+    ['James', 'Raghav S', 1025, 'Jr Eng', 'Hyderabad'],
+    ['Arun k', 'Jitendra K', 1026, 'Jr Eng', 'Hyderabad'],
+    ['Ramesh', 'Soniya', 2037, 'Architech', 'Hyderabad'],
+    ['Ramesh', 'Jim', 2038, 'Qa Eng', 'Mumbai'],
+    ['Paul B', 'Paul P', 2039, 'Qa Eng', 'Bangalore'],
+    ['Paul B', 'Tim', 2040, 'Qa Eng', 'Bangalore'],
+    ['Arun K', 'Rajesh', 1027, 'Jr Eng', 'Delhi'],
+]
+
+# Using defaultdict to group employees by manager
+manager_dict = defaultdict(list)
+
+# Iterate through the dataset and group employees by manager
+for row in data_set:
+    manager_name = row[0]
+    employee_info = {
+        'Employee_name': row[1],
+        'Emp_id': row[2],
+        'Designation': row[3],
+        'Location': row[4]
+    }
+    
+    # Add the employee info to the corresponding manager's list
+    manager_dict[manager_name].append(employee_info)
+
+# Print the organized data
+for manager, employees in manager_dict.items():
+    print(f"Manager: {manager}")
+    for employee in employees:
+        print(f"  Employee Name: {employee['Employee_name']}, ID: {employee['Emp_id']}, "
+              f"Designation: {employee['Designation']}, Location: {employee['Location']}")
+    print()
